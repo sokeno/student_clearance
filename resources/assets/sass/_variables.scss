@@ -1,0 +1,66 @@
+//UP Brand Colors
+$up-maroon: #7b1113;
+$up-green: #014421;
+$up-yellow: #f3aa2c;
+$up-black: #000000;
+$up-olive-green: #565422;
+$up-yellow-green: #335628;
+$up-blue: #132e54;
+$up-red: #8e171a;
+$up-terracotta: #b43c25;
+$up-white: #ffffff;
+
+$footer-height: 100px;
+$navbar-height: $footer-height * 0.5;
+
+$avatar-height: 40px;
+$avatar-margin: ($navbar-height - $avatar-height)/2;
+
+
+// Body
+$body-bg: $up-white;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: $up-maroon;
+$brand-secondary: $up-green;
+$brand-info: $up-yellow;
+$brand-success: $up-green;
+$brand-warning: $up-yellow;
+$brand-danger: $up-red;
+
+// Brands--default
+// $brand-primary: #3097D1;
+// $brand-info: #8eb4cb;
+// $brand-success: #2ab27b;
+// $brand-warning: #cbb956;
+// $brand-danger: #bf5329;
+
+
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+// $navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
