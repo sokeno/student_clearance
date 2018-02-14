@@ -1,4 +1,4 @@
-# online-clearance-system
+# online-student-clearance-system
 The current process of applying for a college clearance is tedious and time
 consuming. A college clearance has to be signed by the heads of every
 department. Most of the time, department heads are not in their respective
