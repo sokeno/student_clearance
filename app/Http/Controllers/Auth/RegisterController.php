@@ -72,13 +72,7 @@ class RegisterController extends Controller
     protected function postregister(Request $request)
     {
         $inputs = $request->all();
-        $this->validate($request, [
-                'name' => 'required',
-		        'email' => 'required|email|max:75|unique:users',
-                'password' => 'required|min:3|confirmed',
-                'student_number' => 'required|min:9',
-                'program' => 'required',
-        ]); 
+        
 	    
       
         // $data =  \Input::except(array('_token')) ;
@@ -100,6 +94,15 @@ class RegisterController extends Controller
 	    
         
         if($inputs['role']=='student'){
+            //this validates a student
+
+            $this->validate($request, [
+                'name' => 'required',
+		        'email' => 'required|email|max:75|unique:users',
+                'password' => 'required|min:3|confirmed',
+                'student_number' => 'required|min:9|unique:students',
+                'program' => 'required',
+        ]); 
 
             $user = new User;
             $user->name =$inputs['name'];
@@ -114,6 +117,15 @@ class RegisterController extends Controller
             $student->save();
             
         }elseif($inputs['role']=='staff'){
+
+            //this validates a staff
+
+            $this->validate($request, [
+                'name' => 'required',
+		        'email' => 'required|email|max:75|unique:users',
+                'password' => 'required|min:3|confirmed',
+                'department' => 'required',
+        ]); 
 
             $user = new User;
             $user->name =$inputs['name'];
