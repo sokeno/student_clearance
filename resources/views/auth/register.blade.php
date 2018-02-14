@@ -64,11 +64,17 @@
                         </div>
 
 
-                        <div class="form-group">
+                        <div class="form-group {{ $errors->has('student_number') ? ' has-error' : '' }} ">
                             <label for="student_number" class="col-md-4 control-label">Student ID</label>
 
                             <div class="col-md-6">
                                 <input id="student_number" type="text" class="form-control" name="student_number" placeholder= "id should be 9 digits" required>
+                                @if ($errors->has('student_number'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('student_number') }}</strong>
+                                </span>
+                            @endif
+
                             </div>
                         </div>
 

@@ -71,11 +71,32 @@ class RegisterController extends Controller
      */
     protected function postregister(Request $request)
     {
-
-        
-	    
         $inputs = $request->all();
-        
+        $this->validate($request, [
+                'name' => 'required',
+		        'email' => 'required|email|max:75|unique:users',
+                'password' => 'required|min:3|confirmed',
+                'student_number' => 'required|min:9',
+                'program' => 'required',
+        ]); 
+	    
+      
+        // $data =  \Input::except(array('_token')) ;
+	    
+	    // $inputs = $request->all();
+	    
+	    // $rule=array(
+		//         'name' => 'required',
+		//         'email' => 'required|email|max:75|unique:users',
+		//         'password' => 'required|min:3|confirmed' 
+		//    		 );
+	    
+	   	//  $validator = \Validator::make($data,$rule);
+ 
+        // if ($validator->fails())
+        // {
+        //         return redirect()->back()->withErrors($validator->messages());
+        // } 
 	    
         
         if($inputs['role']=='student'){
